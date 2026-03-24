@@ -36,7 +36,7 @@ function extractGDriveFileId(url) {
  *
  * TODO: Replace with your actual Cloudflare Worker URL after deployment.
  */
-const CLOUDFLARE_WORKER_URL = "https://gdrive-proxy.YOUR-SUBDOMAIN.workers.dev";
+const CLOUDFLARE_WORKER_URL = "https://gdrive-proxy.alptugan.workers.dev";
 
 /**
  * Convert Google Drive share links to playable URLs.
