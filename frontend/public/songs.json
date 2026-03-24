@@ -1,0 +1,59 @@
+{
+    "songs": [
+        {
+            "id": 1,
+            "title": "Midnight Protocol",
+            "artist": "Vector Stream",
+            "tags": [
+                "Electronic",
+                "Cyberpunk"
+            ],
+            "url": "https://drive.google.com/file/d/1Z4MbvxYTcckUy2uadI70YMaZMbZv0H1Y/view?usp=drive_link",
+            "cover": "covers/cover-default.png"
+        },
+        {
+            "id": 2,
+            "title": "Concrete Jungle",
+            "artist": "Ghost Notes",
+            "tags": [
+                "Urban",
+                "Industrial"
+            ],
+            "url": "audio/alp crazy 16 bit-1.mp3",
+            "cover": "covers/cover-default.png"
+        },
+        {
+            "id": 3,
+            "title": "Atmospheric Re-entry",
+            "artist": "Lumina",
+            "tags": [
+                "Space",
+                "Ambient"
+            ],
+            "url": "audio/alp_tugan-kanichnicht.mp3",
+            "cover": "covers/cover-default.png"
+        },
+        {
+            "id": 4,
+            "title": "Neon Drift",
+            "artist": "Pulse Engine",
+            "tags": [
+                "Synthwave",
+                "Electronic"
+            ],
+            "url": "audio/alp_t.mp3",
+            "cover": "covers/cover-default.png"
+        },
+        {
+            "id": 5,
+            "title": "Granular Decay",
+            "artist": "Modular Collective",
+            "tags": [
+                "Glitch",
+                "Experimental"
+            ],
+            "url": "audio/Alp - m.mp3",
+            "cover": "covers/cover-default.png"
+        }
+    ]
+}

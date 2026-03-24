@@ -1,0 +1,19 @@
+{
+    "name": "ozu-music-concrete",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "wavesurfer.js": "^7.9.1"
+    },
+    "devDependencies": {
+        "vite": "^6.3.5",
+        "tailwindcss": "^4.1.8",
+        "@tailwindcss/vite": "^4.1.8"
+    }
+}

@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #ffbb00;
+    --color-on-primary: #ffffff;
+    --color-surface: #121212;
+    --color-surface-container: #1e1e1e;
+    --color-surface-container-low: #181818;
+    --color-surface-container-high: #252525;
+    --color-surface-container-highest: #333333;
+    --color-outline: #444444;
+    --color-on-surface: #f0f0f0;
+    --color-on-surface-variant: #a0a0a0;
+    --color-background: #0a0a0a;
+
+    --font-headline: "Roboto", sans-serif;
+    --font-body: "Roboto", sans-serif;
+    --font-label: "Roboto", sans-serif;
+}
+
+/* Base styles */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: rgba(255, 187, 0, 0.3);
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+/* Wavesurfer container styling */
+.waveform-container {
+    position: relative;
+    cursor: pointer;
+    margin-top: 0.75rem;
+}
+
+.waveform-container .hover-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    mix-blend-mode: overlay;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.waveform-container:hover .hover-overlay {
+    opacity: 1;
+}
+
+/* Time labels on waveform */
+.waveform-time {
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #ddd;
+    pointer-events: none;
+}
+
+.waveform-time-current {
+    left: 0;
+}
+
+.waveform-time-duration {
+    right: 0;
+}
+
+/* Spectrogram wrapper — hidden by default, toggled via inline style in JS */
+.spectrogram-wrapper {
+    display: none;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+/* Spectrogram container — simple display toggle below waveform */
+.spectrogram-container {
+    overflow: hidden;
+    background: #0a0a0a;
+    position: relative;
+    line-height: 0;
+    font-size: 0;
+}
+
+/* Override wavesurfer spectrogram plugin elements — exclude .spectrogram-loading */
+.spectrogram-container > div:not(.spectrogram-loading) {
+    background: #0a0a0a !important;
+    border-top: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.spectrogram-container > div:not(.spectrogram-loading) > div {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border: none !important;
+}
+
+.spectrogram-container > div:not(.spectrogram-loading) * {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.spectrogram-container canvas {
+    display: block;
+    background: #0a0a0a !important;
+    background-color: #0a0a0a !important;
+}
+
+/* Spectrogram loading spinner */
+.spectrogram-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 0;
+    color: #a0a0a0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.spectrogram-loading .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333 !important;
+    border-top-color: #ffbb00 !important;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Song card */
+.song-card {
+    transition: all 0.3s ease;
+}
+
+.song-card:hover {
+    border-color: rgba(255, 187, 0, 0.5);
+}
+
+/* Active song card — keeps highlight while playing or paused */
+.song-card.active {
+    border-color: rgba(255, 187, 0, 0.5);
+    box-shadow: 0 0 0 1px rgba(255, 187, 0, 0.15);
+}
+
+/* Tag button states */
+.tag-btn {
+    transition: all 0.2s ease;
+}
+
+.tag-btn.active {
+    background: rgba(255, 187, 0, 0.15);
+    color: #ffbb00;
+    border-color: rgba(255, 187, 0, 0.3);
+}
+
+/* View toggle active state */
+.view-toggle-btn.active {
+    color: #ffbb00;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #1e1e1e 25%, #2a2a2a 50%, #1e1e1e 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+/* Wavesurfer overrides for dark theme */
+:root {
+    --ws-cursor-color: #ffbb00;
+}
