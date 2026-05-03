@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #ffbb00;
+    --color-primary: #fcbf49;
     --color-on-primary: #ffffff;
     --color-surface: #121212;
     --color-surface-container: #1e1e1e;
@@ -16,6 +16,70 @@
     --font-headline: "Roboto", sans-serif;
     --font-body: "Roboto", sans-serif;
     --font-label: "Roboto", sans-serif;
+}
+
+html.light {
+    --color-primary: #c9940a;
+    --color-on-primary: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-container: #f0f0f0;
+    --color-surface-container-low: #f8f8f8;
+    --color-surface-container-high: #e4e4e4;
+    --color-surface-container-highest: #d4d4d4;
+    --color-outline: #bbbbbb;
+    --color-on-surface: #121212;
+    --color-on-surface-variant: #555555;
+    --color-background: #f4f4f4;
+}
+
+/* Light theme overrides for hardcoded white-based utilities */
+html.light .text-white {
+    color: #1a1a1a;
+}
+html.light .text-white\/60 {
+    color: rgba(26, 26, 26, 0.7) !important;
+}
+html.light .text-white\/70 {
+    color: rgba(26, 26, 26, 0.75) !important;
+}
+html.light .text-white\/40 {
+    color: rgba(26, 26, 26, 0.55) !important;
+}
+html.light .text-white\/30 {
+    color: rgba(26, 26, 26, 0.5) !important;
+}
+html.light .text-white\/20 {
+    color: rgba(26, 26, 26, 0.4) !important;
+}
+html.light .border-white\/5 {
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+html.light .border-white\/10 {
+    border-color: rgba(0, 0, 0, 0.15) !important;
+}
+html.light .bg-white\/5 {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+html.light .bg-white\/10 {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+}
+html.light .hover\:bg-white\/5:hover {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+html.light .hover\:bg-white\/10:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+html.light .hover\:text-white:hover {
+    color: #000 !important;
+}
+html.light .placeholder\:text-white\/20::placeholder {
+    color: rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Light theme waveform time labels */
+html.light .waveform-time {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
 }
 
 /* Base styles */

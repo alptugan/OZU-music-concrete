@@ -4,7 +4,7 @@
  */
 import "./style.css";
 import { fetchSongs, renderSongCard, extractAllTags, renderTagFilters } from "./songRenderer.js";
-import { initPlayer, toggleSpectrogram, togglePlay } from "./player.js";
+import { initPlayer, toggleSpectrogram, togglePlay, updateAllWaveformColors } from "./player.js";
 
 // State
 let allSongs = [];
@@ -163,3 +163,25 @@ async function init() {
 
 // Start the app
 document.addEventListener("DOMContentLoaded", init);
+
+// Theme toggle
+(function () {
+    const btn = document.getElementById("theme-toggle");
+    const icon = btn ? btn.querySelector(".material-symbols-outlined") : null;
+    const html = document.documentElement;
+
+    // Restore saved preference
+    if (localStorage.getItem("theme") === "light") {
+        html.classList.add("light");
+        if (icon) icon.textContent = "dark_mode";
+    }
+
+    if (btn) {
+        btn.addEventListener("click", () => {
+            const isLight = html.classList.toggle("light");
+            if (icon) icon.textContent = isLight ? "dark_mode" : "light_mode";
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+            updateAllWaveformColors();
+        });
+    }
+})();

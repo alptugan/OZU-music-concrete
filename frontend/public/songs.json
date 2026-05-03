@@ -2,58 +2,310 @@
     "songs": [
         {
             "id": 1,
-            "title": "Midnight Protocol",
-            "artist": "Vector Stream",
+            "title": "Week03-Untitled",
+            "artist": "Aisha Garba Muktar",
+            "date": 2026,
             "tags": [
-                "Electronic",
-                "Cyberpunk"
+                "Music Concrete",
+                "Soundscape"
             ],
-            "url": "https://drive.google.com/file/d/1Z4MbvxYTcckUy2uadI70YMaZMbZv0H1Y/view?usp=drive_link",
-            "cover": "covers/cover-default.png"
+            "url": "https://drive.google.com/file/d/1M7-L1L0VjZ86edB7gnegKtEwWliqAuOO/view?usp=sharing",
+            "cover": "covers/cover-default.jpg"
         },
         {
             "id": 2,
-            "title": "Concrete Jungle",
-            "artist": "Ghost Notes",
+            "title": "Fault Lines",
+            "artist": "Ali Büyükduman",
+            "date": 2026,
             "tags": [
-                "Urban",
-                "Industrial"
+                "Music Concrete",
+                "Soundscape",
+                "Political"
             ],
-            "url": "audio/alp crazy 16 bit-1.mp3",
-            "cover": "covers/cover-default.png"
+            "url": "https://drive.google.com/file/d/1hEcdbUIh6_5FADFWch93k392LbO7f-3R/view?usp=sharing",
+            "cover": "covers/cover-default.jpg"
         },
         {
             "id": 3,
-            "title": "Atmospheric Re-entry",
-            "artist": "Lumina",
+            "title": "Saraçhane Soundscape",
+            "artist": "Ali Uzun",
+            "date": 2026,
             "tags": [
-                "Space",
-                "Ambient"
+                "Music Concrete",
+                "Soundscape",
+                "Political"
             ],
-            "url": "audio/alp_tugan-kanichnicht.mp3",
-            "cover": "covers/cover-default.png"
+            "url": "https://drive.google.com/file/d/1CUMMHBFYZIhwgXwE3GqIFKiulxNQga0q/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
         },
         {
             "id": 4,
-            "title": "Neon Drift",
-            "artist": "Pulse Engine",
+            "title": "Week03-Untitled",
+            "artist": "Alp Eroğlu",
+            "date": 2026,
             "tags": [
-                "Synthwave",
-                "Electronic"
+                "Music Concrete",
+                "Soundscape"
             ],
-            "url": "audio/alp_t.mp3",
-            "cover": "covers/cover-default.png"
+            "url": "https://drive.google.com/file/d/1DWnbl2FxnnWTwVOl1_qK5XfeozQaBliy/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
         },
         {
             "id": 5,
-            "title": "Granular Decay",
-            "artist": "Modular Collective",
+            "title": "Environmental Sound",
+            "artist": "Aslı Özcan",
+            "date": 2026,
             "tags": [
-                "Glitch",
-                "Experimental"
+                "Music Concrete",
+                "Soundscape",
+                "Environmental"
             ],
-            "url": "audio/Alp - m.mp3",
-            "cover": "covers/cover-default.png"
+            "url": "https://drive.google.com/file/d/1NoOf8PZCad8qRfyaG16u_C181uCLcwId/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 6,
+            "title": "18th Biennial",
+            "artist": "Ayşenur Canıtez",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/1xVM1J4x72vaqTOMywtu5LgcRfLuExt1q/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Persecution",
+            "artist": "Baran Ay",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Political"
+            ],
+            "url": "https://drive.google.com/file/d/14kHi-ecRwWJPPBd2WuyhV8p4bNAsPbsu/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Social Composition",
+            "artist": "Ceren Özben",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/1fMEDMF2L7xKWZwkKj4-v2WH5M-lIDgqY/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Week 03 Composition",
+            "artist": "Ceyda Koşer",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape"
+            ],
+            "url": "https://drive.google.com/file/d/1gbx9Y1NO55VuOfe4QI0Km-dkksHhnWLa/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Social Sound Composition",
+            "artist": "Doğa Özbeklik",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/1HBZo4sMw-kRz8Terc7TobXohUmBFcT5j/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 11,
+            "title": "Environmental Sound Composition",
+            "artist": "Duru Özcan",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Environmental"
+            ],
+            "url": "https://drive.google.com/file/d/1-LOpFI3lj-KHhOOpUpwQQbZ6uIXrR_PV/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 12,
+            "title": "Social Sound Composition",
+            "artist": "Farah Garayeva",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/1WPmCG3a7quB0TBJX-5xwY27gqp3zBieZ/view?usp=share_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 13,
+            "title": "Social Sound Composition",
+            "artist": "Farah Garayeva",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/1WPmCG3a7quB0TBJX-5xwY27gqp3zBieZ/view?usp=share_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Doppitz",
+            "artist": "Faruk Sarı",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/19dd52H5FCf8P4DW8zjfEJb4zbhjuOFPn/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 15,
+            "title": "Political Sound Composition",
+            "artist": "İpek Ögetürk",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Political"
+            ],
+            "url": "https://drive.google.com/file/d/14IFbRR-JUWcpyavyHDQM3hFrU0LgKvI1/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 16,
+            "title": "Political Sound Composition",
+            "artist": "Jeyla Gulamova",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Political"
+            ],
+            "url": "https://drive.google.com/file/d/19GZxq4UMXdKOa4aCbuxs1L8ALKJlJgyw/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 17,
+            "title": "Environmental Sound Composition",
+            "artist": "Kerem Yaşlıçimen",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Environmental"
+            ],
+            "url": "https://drive.google.com/file/d/1exF23WYUM0tSdqSGIDxgRhYwhD8JVwXk/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 18,
+            "title": "Environmental Sound Composition",
+            "artist": "Lal Tügran",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Environmental"
+            ],
+            "url": "https://drive.google.com/file/d/1hvhwZe7hmG4HMkRmqUK3HNRMt0_I9ffa/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 19,
+            "title": "Social Sound Composition",
+            "artist": "Mert Çambol",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/12CsjnOYGHrSN4vrptwS2spPF_un4CkYj/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 20,
+            "title": "Week 03",
+            "artist": "Nil Baykan",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape"
+            ],
+            "url": "https://drive.google.com/file/d/1_5uBaOYcg0qqvsZFoPcijXelHPLiWY-g/view?usp=sharing",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 21,
+            "title": "Week 03",
+            "artist": "Nisa Emer",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape"
+            ],
+            "url": "https://drive.google.com/file/d/1ImmYwMk4c1GtXQ-YwiLoLfkz2xRkeLCq/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 22,
+            "title": "Social Sound Week 03",
+            "artist": "Rüya Mihdavi",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Social"
+            ],
+            "url": "https://drive.google.com/file/d/1ImmYwMk4c1GtXQ-YwiLoLfkz2xRkeLCq/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 23,
+            "title": "Environmental Sound Week 03",
+            "artist": "Sarah Fateh",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Environmental"
+            ],
+            "url": "https://drive.google.com/file/d/17AF_Fum6PsM8TklxOJ-eEWFfo_tL9Sdn/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
+        },
+        {
+            "id": 24,
+            "title": "Environmental Sound Week 03",
+            "artist": "Umut Tellioğlu",
+            "date": 2026,
+            "tags": [
+                "Music Concrete",
+                "Soundscape",
+                "Environmental"
+            ],
+            "url": "https://drive.google.com/file/d/1O3vLSP8dsjOT7_vSkSwYOFYOJHB9LDV2/view?usp=drive_link",
+            "cover": "covers/cover-default.jpg"
         }
     ]
 }

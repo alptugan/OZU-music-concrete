@@ -1,5 +1,6 @@
 import WaveSurfer from "wavesurfer.js";
 import Spectrogram from "wavesurfer.js/dist/plugins/spectrogram.esm.js";
+import Hover from "wavesurfer.js/dist/plugins/hover.esm.js";
 
 // Store all active wavesurfer instances
 const players = new Map();
@@ -62,19 +63,29 @@ export function convertGDriveUrl(url) {
  * Create canvas gradient for waveform (SoundCloud style).
  */
 function createGradients(ctx, height) {
+    const isLight = document.documentElement.classList.contains("light");
+
     const waveGradient = ctx.createLinearGradient(0, 0, 0, height);
-    waveGradient.addColorStop(0, "#656666");
-    waveGradient.addColorStop(0.69, "#656666");
-    waveGradient.addColorStop(0.7, "#ffffff");
-    waveGradient.addColorStop(0.71, "#B1B1B1");
-    waveGradient.addColorStop(1, "#B1B1B1");
+    if (isLight) {
+        waveGradient.addColorStop(1, "#888888");
+        waveGradient.addColorStop(0.9, "#999999");
+        waveGradient.addColorStop(0.5, "#333333");
+        waveGradient.addColorStop(0.1, "#555555");
+        waveGradient.addColorStop(0, "#777777");
+    } else {
+        waveGradient.addColorStop(1, "#4c4c4c");
+        waveGradient.addColorStop(0.9, "#656666");
+        waveGradient.addColorStop(0.5, "#ffffff");
+        waveGradient.addColorStop(0.1, "#B1B1B1");
+        waveGradient.addColorStop(0, "#f4f4f4");
+    }
 
     const progressGradient = ctx.createLinearGradient(0, 0, 0, height);
-    progressGradient.addColorStop(0, "#ffbb00");
-    progressGradient.addColorStop(0.69, "#ffbb00");
-    progressGradient.addColorStop(0.7, "#ffffff");
-    progressGradient.addColorStop(0.71, "#c49200");
-    progressGradient.addColorStop(1, "#c49200");
+    progressGradient.addColorStop(0, "#ffcb3d");
+    progressGradient.addColorStop(0.2, "#ffbb00");
+    progressGradient.addColorStop(0.5, "#ffea98");
+    progressGradient.addColorStop(0.8, "#c49200");
+    progressGradient.addColorStop(1, "#735600");
 
     return { waveGradient, progressGradient };
 }
@@ -103,13 +114,13 @@ function pauseOthers(songId) {
  * Attach event listeners to a wavesurfer instance.
  */
 function attachPlayerEvents(ws, song, container) {
-    const hoverOverlay = container.querySelector(".hover-overlay");
+    /*const hoverOverlay = container.querySelector(".hover-overlay");
     if (hoverOverlay) {
         container.addEventListener("pointermove", (e) => {
             const rect = container.getBoundingClientRect();
             hoverOverlay.style.width = `${e.clientX - rect.left}px`;
         });
-    }
+    }*/
 
     const timeEl = document.getElementById(`time-${song.id}`);
     const durationEl = document.getElementById(`duration-${song.id}`);
@@ -180,9 +191,21 @@ function buildWsOptions(container, waveGradient, progressGradient, song) {
         barGap: 1,
         barRadius: 2,
         height: 80,
-        cursorWidth: 0,
+        //cursorWidth: 1,
+        //cursorColor: "#ff4141",
         dragToSeek: true,
         normalize: true,
+        sampleRate: 12000,
+        plugins: [
+            Hover.create({
+                lineColor: "#ff4141",
+                lineWidth: 1,
+                labelBackground: "#333333aa",
+                labelColor: "#fff",
+                labelSize: "11px",
+                labelPreferLeft: false,
+            }),
+        ],
     };
     if (song.peaks) {
         opts.peaks = [song.peaks];
@@ -240,7 +263,7 @@ export function initPlayer(song, waveformSelector) {
             ws.destroy();
 
             // Reset container (wavesurfer clears it on destroy, re-add hover overlay)
-            container.innerHTML = '<div class="hover-overlay"></div>';
+            //container.innerHTML = '<div class="hover-overlay"></div>';
 
             // Create <audio> element — no crossOrigin so it loads from any origin
             const audio = new Audio(audioUrl);
@@ -302,7 +325,7 @@ export function toggleSpectrogram(songId) {
                             height: 200,
                             splitChannels: false,
                             scale: "linear",
-                            frequencyMax: 4000,
+                            frequencyMax: 6000, // samplerate / 2
                             frequencyMin: 0,
                             fftSamples: 512,
                             labelsColor: "#a0a0a0",
@@ -389,4 +412,19 @@ export function destroyAllPlayers() {
         player.ws.destroy();
     });
     players.clear();
+}
+
+/**
+ * Update waveform colors on all active players to match the current theme.
+ * Call this after toggling the theme class on <html>.
+ */
+export function updateAllWaveformColors() {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    const { waveGradient, progressGradient } = createGradients(ctx, 150);
+    players.forEach((playerData) => {
+        if (playerData.ws) {
+            playerData.ws.setOptions({ waveColor: waveGradient, progressColor: progressGradient });
+        }
+    });
 }

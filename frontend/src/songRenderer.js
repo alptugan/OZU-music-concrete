@@ -97,13 +97,16 @@ export function renderSongCard(song, container) {
 
     article.innerHTML = `
     <!-- Cover Image -->
-    <div class="relative w-full md:w-36 h-36 flex-shrink-0 overflow-hidden rounded-md">
-      <img
-        src="${escapeHtml(coverSrc)}"
-        alt="${escapeHtml(song.title)} cover"
-        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        onerror="this.src='${escapeHtml(`${import.meta.env.BASE_URL}${DEFAULT_COVER}`)}'"
-      />
+    <div class="flex flex-col items-start w-full md:w-36 flex-shrink-0">
+      <div class="relative w-full h-36 overflow-hidden rounded-md">
+        <img
+          src="${escapeHtml(coverSrc)}"
+          alt="${escapeHtml(song.title)} cover"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          onerror="this.src='${escapeHtml(`${import.meta.env.BASE_URL}${DEFAULT_COVER}`)}'"
+        />
+      </div>
+      ${song.date ? `<span class="px-2 py-1 bg-surface-container-highest text-white/30 text-sm rounded mt-2">${song.date}</span>` : ""}
     </div>
 
     <!-- Song Content -->
